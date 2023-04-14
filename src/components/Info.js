@@ -8,8 +8,6 @@ const Info = () => {
         <li>After selecting the photo, a form will appear. Fill in the form with 1 noun, 1 verb, and 1 adjective.</li>
         <li>Once you submit the form, your creation will be displayed underneath, photo and headline. </li>
       </ol>
-
-      <button className="generate" id="generate">Generate</button>
     </section>
   )
 }
