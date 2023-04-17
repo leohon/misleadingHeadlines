@@ -43,10 +43,12 @@ const News = () => {
 
   return (
     <section className="newsGallery">
-      <button className="generate" id="generate" onClick={endpoint}>Generate</button>
-      <div className="imgContainer"></div>
-      <div className="imgContainer"></div>
-      <div className="imgContainer"></div>
+      <div className="wrapper">
+        <button className="generate" id="generate" onClick={endpoint}>Generate</button>
+        <div className="imgContainer"></div>
+        <div className="imgContainer"></div>
+        <div className="imgContainer"></div>
+      </div>
     </section>
   )
 }
