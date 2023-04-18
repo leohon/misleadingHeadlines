@@ -1,7 +1,8 @@
+import Form from "./Form";
+
 const News = () => {
   // Display the images
   function display(images) {
-    // const headline = images.data[0].title;
     const imgContainer = document.querySelector(".imgContainer");
     imgContainer.innerHTML = " ";
     
@@ -9,7 +10,9 @@ const News = () => {
     // ***If img src = null???
     for (let i = 0; i < images.data.length; i++) {
       const imgElement = document.createElement("img");
+      //add a className
       imgElement.src = images.data[i].image;
+      //imgElement.alt = images.data[i].title;
       imgContainer.appendChild(imgElement);
     }
   }
@@ -28,9 +31,10 @@ const News = () => {
     const url = new URL("http://api.mediastack.com/v1/news");
     const canada = "ca";
     let date = new Date().toJSON().slice(0,10);
-    const sort = "popularity";
+    // const sort = "popularity";
     
     // Add dropdown for more variety? Doesn't really refresh well.
+    // Option: limit - 1, offset - Math.floor(Math.random() * 100), date - date but with true/false value
     url.search = new URLSearchParams({
       access_key: apiKey,
       countries: canada,
@@ -41,13 +45,32 @@ const News = () => {
     callAPI(url);
   }
 
+  //Form popup
+  function click() {
+    const form = document.querySelector(".form");
+    
+    // TODO: remove if statements, just need popup
+    if (form.style.display === "none") {
+      form.style.display = "block";
+    }
+    else {
+      form.style.display = "none";
+    }
+  }
+
   return (
     <section className="newsGallery">
       <div className="wrapper">
         <button className="generate" id="generate" onClick={endpoint}>Generate</button>
-        <div className="imgContainer"></div>
-        <div className="imgContainer"></div>
-        <div className="imgContainer"></div>
+        <div className="imgContainer" onClick={click}></div>
+        <div className="imgContainer" onClick={click}></div>
+        <div className="imgContainer" onClick={click}></div>
+
+        <div className="imgContainer" onClick={click}>
+          <img src="https://placekitten.com/200/200" alt="" />
+        </div>
+
+        <Form />
       </div>
     </section>
   )
