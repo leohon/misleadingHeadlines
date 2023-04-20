@@ -37,7 +37,7 @@ const FirstAPI = () => {
       access_key: apiKey,
       countries: canada,
       // date: date, //change to dates
-      limit: 3,
+      limit: 3
     })
 
     callAPI(url);
