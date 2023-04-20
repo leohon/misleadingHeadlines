@@ -1,5 +1,5 @@
 const Form = function(props) {
-  const create = function() {    
+  const madlib = function() {    
     const noun = document.querySelector("#noun");
     const verb = document.querySelector("#verb");
     const adj = document.querySelector("#adj");
@@ -24,7 +24,7 @@ const Form = function(props) {
   }
 
   return (
-    <form action="#" method="#" className="form">
+    <form onSubmit={madlib} className="form">
       <h3>Give me a . . .</h3>
 
       <label htmlFor="noun">Noun: </label>
@@ -36,7 +36,7 @@ const Form = function(props) {
       <label htmlFor="adj">Adjective: </label>
       <input type="text" className="adj" id="adj" required/>
 
-      <button onClick={create}>Submit</button>
+      <button>Submit</button>
     </form>    
   )
 }
