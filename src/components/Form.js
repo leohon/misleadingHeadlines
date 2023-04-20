@@ -1,5 +1,5 @@
 const Form = function(props) {
-  function create() {    
+  const create = function() {    
     const noun = document.querySelector("#noun");
     const verb = document.querySelector("#verb");
     const adj = document.querySelector("#adj");
@@ -28,15 +28,15 @@ const Form = function(props) {
       <h3>Give me a . . .</h3>
 
       <label htmlFor="noun">Noun: </label>
-      <input type="text" className="noun" id="noun"/>
+      <input type="text" className="noun" id="noun" required/>
       
       <label htmlFor="verb">Verb: </label>
-      <input type="text" className="verb" id="verb"/>
+      <input type="text" className="verb" id="verb" required/>
       
       <label htmlFor="adj">Adjective: </label>
-      <input type="text" className="adj" id="adj"/>
+      <input type="text" className="adj" id="adj" required/>
 
-      <button type="submit" onClick={create}>Submit</button>
+      <button onClick={create}>Submit</button>
     </form>    
   )
 }

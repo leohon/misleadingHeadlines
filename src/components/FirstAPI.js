@@ -1,6 +1,6 @@
 const FirstAPI = function() {
   // Display the images
-  function display(images) {
+  const display = function(images) {
     const imgContainer = document.querySelector(".imgContainer");
     imgContainer.innerHTML = " ";
     
@@ -16,7 +16,7 @@ const FirstAPI = function() {
   }
 
   // Call the API
-  async function callAPI(url) {
+  const callAPI = async function(url) {
     const obj = await fetch(url);
     const images = await obj.json();
     console.log(images)
@@ -24,7 +24,7 @@ const FirstAPI = function() {
   }
 
   // Construct the endpoint
-  function endpoint() {
+  const endpoint = function() {
     const apiKey = '0fa169ec9d099a5466a62a98dc6fdfa2';
     const url = new URL("http://api.mediastack.com/v1/news");
     const canada = "ca";

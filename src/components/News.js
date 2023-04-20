@@ -5,7 +5,7 @@ const News = function() {
   const [POS, setPOS] = useState([]);
   const [tags, setTags] = useState([]);
 
-  function callAPITwo() {
+  const callAPITwo = function() {
     // Grab the alt text and place sentence into an array of words
     const test = document.querySelector(".newsGallery img")
     const arr = test.alt.split(' ');
@@ -18,7 +18,7 @@ const News = function() {
     setTags(tags);
   }
 
-  function createForm() {
+  const createForm = function() {
     //Form popup
     const form = document.querySelector(".form");
     form.style.display = "block";
