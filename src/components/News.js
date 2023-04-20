@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Form from "./Form";
 
-const News = () => {
+const News = function() {
   const [POS, setPOS] = useState([]);
   const [tags, setTags] = useState([]);
 

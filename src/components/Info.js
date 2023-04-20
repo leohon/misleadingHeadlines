@@ -1,6 +1,6 @@
 import FirstAPI from "./FirstAPI";
 
-const Info = () => {
+const Info = function() {
   return (
     <section className="instructions">
       <div className="wrapper">

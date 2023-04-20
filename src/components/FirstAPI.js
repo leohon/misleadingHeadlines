@@ -1,4 +1,4 @@
-const FirstAPI = () => {
+const FirstAPI = function() {
   // Display the images
   function display(images) {
     const imgContainer = document.querySelector(".imgContainer");

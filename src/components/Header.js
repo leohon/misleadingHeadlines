@@ -1,4 +1,4 @@
-const Header = () => {
+const Header = function() {
   return (
     <header>
       <div className="wrapper">

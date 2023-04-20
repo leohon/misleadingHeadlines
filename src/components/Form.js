@@ -1,4 +1,4 @@
-const Form = (props) => {
+const Form = function(props) {
   function create() {    
     const noun = document.querySelector("#noun");
     const verb = document.querySelector("#verb");
