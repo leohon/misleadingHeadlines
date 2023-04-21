@@ -2,6 +2,7 @@ import FirstAPI from "./FirstAPI";
 
 const Info = function() {
   return (
+    // Instructions on how to use the app
     <section className="instructions">
       <div className="wrapper">
         <h2>Instructions</h2>
@@ -12,6 +13,7 @@ const Info = function() {
           <li>Once you submit the form, your creation will be displayed underneath, photo and headline. </li>
         </ol>
 
+        {/* Where the code for the first API call is */}
         <FirstAPI />
       </div>
     </section>

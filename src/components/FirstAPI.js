@@ -1,10 +1,10 @@
 const FirstAPI = function() {
   // Display the images
   const display = function(images) {
-    const imgContainer = document.querySelector(".imgContainer");
+    const imgContainer = document.getElementsByClassName("imgContainer");
     imgContainer.innerHTML = " ";
     
-    //loop through for different images. 
+    //loop through the different images, store the image and title as src and alt respectively. 
     // ***If img src = null???
     for (let i = 0; i < images.data.length; i++) {
       const imgElement = document.createElement("img");
@@ -44,6 +44,7 @@ const FirstAPI = function() {
   }
   
   return (
+    //The Generate button that calls the News API for 3 photos
     <button className="generate" id="generate" onClick={endpoint}>Generate</button>
   )
 }
