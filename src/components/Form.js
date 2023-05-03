@@ -2,18 +2,22 @@ const Form = function(props) {
   const showResult = function(headline) {
     const section = document.querySelector(".result");
     section.style.display = "block";
-
-    let headlineCount = 0;
     
-    // Create an img & p element in the result section.
-    // Input image & text using innerHTML then append to section.
     // Eliminates first initalization of 'section' which is null.
-    if (section !== null && headlineCount < 1) {
+    if (section !== null) {
+      // Create an img & p element (add classname) in the result section.
+      const imgElement = document.createElement("img");
       const pElement = document.createElement("p");
       pElement.classList.add("headline");
+      
+      // Clear section then input image & text using src & innerHTML
+      section.innerHTML = "";
+      imgElement.src = props.photo;
       pElement.innerHTML = headline.join(" ");
+
+      // Append to section.
+      section.appendChild(imgElement);
       section.appendChild(pElement);
-      headlineCount++;
     }
   }
 
@@ -24,7 +28,7 @@ const Form = function(props) {
     const noun = document.getElementById("noun");
     const verb = document.getElementById("verb");
     const adj = document.getElementById("adj");
-    let nounNum = 0, verbNum = 0, adjNum = 0; 
+    let nounNum = 0, verbNum = 0, adjNum = 0; //Counter for 1 noun, 1 verb, 1 adjective
 
     // NN = noun, VB = verb, JJ = adjective
     for (let i = 0; i < props.tags.length; i++) {
@@ -66,7 +70,7 @@ const Form = function(props) {
           <label htmlFor="adj">Adjective: </label>
           <input type="text" className="adj" id="adj" required/>
         </div>
-        
+
         <div className="buttonContainer">
           <button className="submit">Submit</button>
         </div>

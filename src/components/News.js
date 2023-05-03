@@ -2,20 +2,24 @@ import { useState } from "react";
 import Form from "./Form";
 
 const News = function() {
-  // useStates to store and pass alt text (as an array) and the Part-Of-Speech tags
-  const [text, settext] = useState([]);
+  // useStates to store and pass image src, alt text (as an array), and the Part-Of-Speech tags
+  const [photo, setPhoto] = useState("");
+  const [text, setText] = useState([]);
   const [tags, setTags] = useState([]);
 
   const callAPITwo = function() {
-    // Grab the alt text and place sentence into an array of words
+    // Grab the alt text and place sentence into an array of words. Grab image source as well.
     const image = document.querySelector(".newsGallery img")
     const array = image.alt.split(' ');
-    settext(array);
-    
+    const source = image.src;
+
     // Second API
     // https://npm.io/package/en-pos
     const Tag = require("en-pos").Tag;
     var tags = new Tag(array).initial().smooth().tags;
+
+    setPhoto(source);
+    setText(array);
     setTags(tags);
   }
 
@@ -43,6 +47,7 @@ const News = function() {
         <Form 
           tags={tags}
           text={text}
+          photo={photo}
         />
       </div>
     </section>
