@@ -52,16 +52,24 @@ const Form = function(props) {
       <form onSubmit={madlib} className="form">
         <h3>Give me a . . .</h3>
 
-        <label htmlFor="noun">Noun: </label>
-        <input type="text" className="noun" id="noun" required/>
-        
-        <label htmlFor="verb">Verb: </label>
-        <input type="text" className="verb" id="verb" required/>
-        
-        <label htmlFor="adj">Adjective: </label>
-        <input type="text" className="adj" id="adj" required/>
+        <div className="containLI">
+          <label htmlFor="noun">Noun: </label>
+          <input type="text" className="noun" id="noun" required/>
+        </div>
 
-        <button className="submit">Submit</button>
+        <div className="containLI">
+          <label htmlFor="verb">Verb: </label>
+          <input type="text" className="verb" id="verb" required/>
+        </div>
+
+        <div className="containLI">
+          <label htmlFor="adj">Adjective: </label>
+          <input type="text" className="adj" id="adj" required/>
+        </div>
+        
+        <div className="buttonContainer">
+          <button className="submit">Submit</button>
+        </div>
       </form>
     
       {/* Result section where finished product is displayed */}

@@ -45,7 +45,9 @@ const FirstAPI = function() {
   
   return (
     //The Generate button that calls the News API for 3 photos
-    <button className="generate" id="generate" onClick={endpoint}>Generate</button>
+    <div className="buttonContainer">
+      <button className="generate" id="generate" onClick={endpoint}>Generate</button>
+    </div>
   )
 }
 
