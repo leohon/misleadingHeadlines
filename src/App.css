@@ -23,10 +23,99 @@ h1, h2, h3, p, ol, ul, li, label, input, button {
   margin: 0 auto;
 }
 
+section {
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+/* Header */
+header {
+  background-color: aqua;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav li {
+  list-style: none;
+  text-transform: uppercase;
+  padding: 15px 0;
+} 
+
+nav li a {
+  text-decoration: none;
+  color: #000;
+}
+
+h1 {
+  text-align: center;
+  padding: 50px 0;
+}
+
+/* Info */
+h2, .instructions .buttonContainer {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.instructions ol {
+  margin: 0 100px;
+  padding: 15px 0;
+}
+
+#generate {
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+/* News Gallery */
+
+
+/* Form */
 .form, .result {
   display: none;
+}
+
+.form {
+  text-align: center;
+  border: 2px solid;
+  width: 40%;
+  margin: 0 auto;
+}
+
+h3, .containLI, .form .buttonContainer {
+  padding: 10px 0;
+}
+
+.containLI label {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.submit {
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+/* Result */
+.result {
+  text-align: center;
+  padding-top: 50px;
 }
 
 .headline::first-letter {
   text-transform: capitalize;
 }
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px 0;
+  background-color: aqua;
+}
+
+/* Media Queries */
