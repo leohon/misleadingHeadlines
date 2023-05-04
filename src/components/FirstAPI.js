@@ -8,7 +8,7 @@ const FirstAPI = function() {
     for (let i = 0; i < imgContainer.length; i++) {
       imgContainer[i].innerHTML = "";
       const imgElement = document.createElement("img");
-      //add a className
+      // imgElement.setAttribute('id', "img" + i);
       imgElement.src = images.data[i].image;
       //imgElement.alt = images.data[i].title;
       imgContainer[i].appendChild(imgElement);
