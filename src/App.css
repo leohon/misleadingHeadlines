@@ -28,6 +28,10 @@ section {
   margin-bottom: 50px;
 }
 
+img {
+  width: 100%;
+}
+
 /* Header */
 header {
   background-color: aqua;
@@ -75,6 +79,10 @@ h2, .instructions .buttonContainer {
   display: flex;
   justify-content: space-evenly;
   padding-bottom: 50px;
+}
+
+.imgContainer {
+  width: 30%;
 }
 
 /* Form */
