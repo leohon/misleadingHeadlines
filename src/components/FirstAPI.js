@@ -1,17 +1,17 @@
 const FirstAPI = function() {
   // Display the images
   const display = function(images) {
-    const imgContainer = document.getElementsByClassName("imgContainer");
-    imgContainer.innerHTML = " ";
+   const imgContainer = document.getElementsByClassName("imgContainer");
     
-    //loop through the different images, store the image and title as src and alt respectively. 
-    // ***If img src = null???
-    for (let i = 0; i < images.data.length; i++) {
+   //loop through the different images, store the image and title as src and alt respectively. 
+   // ***If img src = null???
+    for (let i = 0; i < imgContainer.length; i++) {
+      imgContainer[i].innerHTML = "";
       const imgElement = document.createElement("img");
       //add a className
       imgElement.src = images.data[i].image;
       //imgElement.alt = images.data[i].title;
-      imgContainer.appendChild(imgElement);
+      imgContainer[i].appendChild(imgElement);
     }
   }
 
