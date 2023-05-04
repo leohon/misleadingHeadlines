@@ -71,7 +71,11 @@ h2, .instructions .buttonContainer {
 }
 
 /* News Gallery */
-
+.gallery {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 50px;
+}
 
 /* Form */
 .form, .result {

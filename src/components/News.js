@@ -35,13 +35,22 @@ const News = function() {
     <section className="newsGallery">
       <div className="wrapper">
         {/* May need to add parameter to createForm function */}
-        <div className="imgContainer" onClick={createForm}></div>
-        <div className="imgContainer" onClick={createForm}></div>
-        <div className="imgContainer" onClick={createForm}></div>
-
+        <div className="gallery">
+          <div className="imgContainer" onClick={createForm}></div>
+          <div className="imgContainer" onClick={createForm}></div>
+          <div className="imgContainer" onClick={createForm}></div>
+        </div>
         {/* Temp placeholder for testing without wasting API calls */}
-        <div className="imgContainer" onClick={createForm}>
-          <img src="https://placekitten.com/200/200" alt="Keep the big box on the table." />
+        <div className="gallery">
+          <div className="imgContainer" onClick={createForm}>
+            <img src="https://placekitten.com/200/200" alt="Keep the big box on the table." />
+          </div>
+          <div className="imgContainer" onClick={createForm}>
+            <img src="https://placekitten.com/200/200" alt="Keep the big box on the table." />
+          </div>
+          <div className="imgContainer" onClick={createForm}>
+            <img src="https://placekitten.com/200/200" alt="Keep the big box on the table." />
+          </div>
         </div>
 
         <Form 
