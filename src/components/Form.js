@@ -1,3 +1,5 @@
+import Reset from "./Reset";
+
 const Form = function(props) {
   const showResult = function(headline) {
     const section = document.querySelector(".result");
@@ -78,6 +80,10 @@ const Form = function(props) {
     
       {/* Result section where finished product is displayed */}
       <div className="result"></div>
+      
+
+      {/* Reset button */}
+      <Reset />
     </>
   )
 }

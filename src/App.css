@@ -86,6 +86,7 @@ h2, .instructions .buttonContainer {
 }
 
 /* Form */
+/* TODO: set a section, make it display: none, as form & result in same section */
 .form, .result {
   display: none;
 }
@@ -108,9 +109,13 @@ h3, .containLI, .form .buttonContainer {
   padding-right: 10px;
 }
 
-.submit {
+.submit, .reset {
   padding: 10px;
   text-transform: uppercase;
+}
+
+.buttonContainer {
+  text-align: center;
 }
 
 /* Result */
