@@ -1,10 +1,10 @@
 const FirstAPI = function() {
   // Display the images
   const display = function(images) {
-   const imgContainer = document.getElementsByClassName("imgContainer");
-    
-   //loop through the different images, store the image and title as src and alt respectively. 
-   // ***If img src = null???
+    const imgContainer = document.getElementsByClassName("imgContainer");
+      
+    //loop through the different images, store the image and title as src and alt respectively. 
+    // ***If img src = null???
     for (let i = 0; i < imgContainer.length; i++) {
       imgContainer[i].innerHTML = "";
       const imgElement = document.createElement("img");

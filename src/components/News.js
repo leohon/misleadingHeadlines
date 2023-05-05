@@ -26,11 +26,9 @@ const News = function() {
 
   const createForm = function(event) {
     //Form popup
-    const form = document.querySelector('form')
-    form.style.display = "block";
+    document.querySelector('form').style.display = "block";
     
-    const target = event.target;
-    callAPITwo(target);
+    callAPITwo(event.target);
   }
 
   return (

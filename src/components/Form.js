@@ -80,7 +80,6 @@ const Form = function(props) {
     
       {/* Result section where finished product is displayed */}
       <div className="result"></div>
-      
 
       {/* Reset button */}
       <Reset />
