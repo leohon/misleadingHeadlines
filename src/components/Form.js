@@ -3,7 +3,10 @@ import Reset from "./Reset";
 const Form = function(props) {
   const showResult = function(headline) {
     const section = document.querySelector(".result");
+    const reset = document.querySelector(".reset");
+
     section.style.display = "block";
+    reset.style.display = "block"
     
     // Eliminates first initalization of 'section' which is null.
     if (section !== null) {
@@ -53,7 +56,7 @@ const Form = function(props) {
   }
 
   return (
-    <>
+    <section className="MLform">
       {/* Form for madlib concept */}
       <form onSubmit={madlib} className="form">
         <h3>Give me a . . .</h3>
@@ -83,7 +86,7 @@ const Form = function(props) {
 
       {/* Reset button */}
       <Reset />
-    </>
+    </section>
   )
 }
 

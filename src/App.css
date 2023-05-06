@@ -87,7 +87,7 @@ h2, .instructions .buttonContainer {
 
 /* Form */
 /* TODO: set a section, make it display: none, as form & result in same section */
-.form, .result {
+.form, .result, .reset {
   display: none;
 }
 
@@ -114,10 +114,6 @@ h3, .containLI, .form .buttonContainer {
   text-transform: uppercase;
 }
 
-.buttonContainer {
-  text-align: center;
-}
-
 /* Result */
 .result {
   text-align: center;
@@ -126,6 +122,11 @@ h3, .containLI, .form .buttonContainer {
 
 .headline::first-letter {
   text-transform: capitalize;
+}
+
+.reset {
+  margin: 20px auto;
+
 }
 
 /* Footer */

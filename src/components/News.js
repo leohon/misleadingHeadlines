@@ -22,8 +22,6 @@ const News = function() {
     setTags(tags);
   }
     
-// May: TODO - pass image properties by selected option only
-
   const createForm = function(event) {
     //Form popup
     document.querySelector('form').style.display = "block";
