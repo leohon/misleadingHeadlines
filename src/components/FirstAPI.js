@@ -8,9 +8,18 @@ const FirstAPI = function() {
     for (let i = 0; i < imgContainer.length; i++) {
       imgContainer[i].innerHTML = "";
       const imgElement = document.createElement("img");
-      imgElement.src = images.data[i].image;
-      imgElement.alt = images.data[i].title;
-      imgContainer[i].appendChild(imgElement);
+      const pElement = document.createElement("p");
+
+      if (images.data[i].image === null) {
+        pElement.innerHTML = "There is no image. Please choose another image or press the GENERATE button.";
+        imgContainer[i].appendChild(pElement);
+        continue;
+      }
+      else {
+        imgElement.src = images.data[i].image;
+        imgElement.alt = images.data[i].title;
+        imgContainer[i].appendChild(imgElement);
+      }
     }
   }
 
