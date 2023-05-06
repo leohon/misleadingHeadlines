@@ -26,15 +26,12 @@ const FirstAPI = function() {
     const apiKey = '0fa169ec9d099a5466a62a98dc6fdfa2';
     const url = new URL("http://api.mediastack.com/v1/news");
     const canada = "ca";
-    let date = new Date().toJSON().slice(0,10);
-    // const sort = "popularity";
-    
-    // Add dropdown for more variety? Doesn't really refresh well.
-    // Option: limit - 1, offset - Math.floor(Math.random() * 100), date - date but with true/false value
+    const offset = Math.floor(Math.random() * 100);
+
     url.search = new URLSearchParams({
       access_key: apiKey,
       countries: canada,
-      // date: date, //change to dates
+      offset: offset,
       limit: 3
     })
 
