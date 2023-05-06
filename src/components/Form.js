@@ -2,27 +2,27 @@ import Reset from "./Reset";
 
 const Form = function(props) {
   const showResult = function(headline) {
-    const section = document.querySelector(".result");
+    const result = document.querySelector(".result");
     const reset = document.querySelector(".reset");
 
-    section.style.display = "block";
+    result.style.display = "block";
     reset.style.display = "block"
     
     // Eliminates first initalization of 'section' which is null.
-    if (section !== null) {
+    if (result !== null) {
       // Create an img & p element (add classname) in the result section.
       const imgElement = document.createElement("img");
       const pElement = document.createElement("p");
       pElement.classList.add("headline");
       
       // Clear section then input image & text using src & innerHTML
-      section.innerHTML = "";
+      result.innerHTML = "";
       imgElement.src = props.photo;
       pElement.innerHTML = headline.join(" ");
 
       // Append to section.
-      section.appendChild(imgElement);
-      section.appendChild(pElement);
+      result.appendChild(imgElement);
+      result.appendChild(pElement);
     }
   }
 
