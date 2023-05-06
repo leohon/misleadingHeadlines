@@ -86,7 +86,6 @@ h2, .instructions .buttonContainer {
 }
 
 /* Form */
-/* TODO: set a section, make it display: none, as form & result in same section */
 .form, .result, .reset {
   display: none;
 }
@@ -118,6 +117,10 @@ h3, .containLI, .form .buttonContainer {
 .result {
   text-align: center;
   padding-top: 50px;
+}
+
+.result img {
+  width: 50%;
 }
 
 .headline::first-letter {
