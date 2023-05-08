@@ -32,9 +32,22 @@ img {
   width: 100%;
 }
 
+a {
+  color: white;
+}
+
+.break {
+  border-top: 3px solid black;
+  margin: 25px 0;
+}
+
 /* Header */
 header {
-  background-color: aqua;
+  background: linear-gradient(blue, red);
+}
+
+nav {
+  /* background-color: blue; */
 }
 
 nav ul {
@@ -50,12 +63,14 @@ nav li {
 
 nav li a {
   text-decoration: none;
-  color: #000;
 }
 
 h1 {
   text-align: center;
-  padding: 50px 0;
+  padding: 100px 0;
+  /* background-color: red; */
+  color: white;
+  text-transform: uppercase;
 }
 
 /* Info */
@@ -65,7 +80,7 @@ h2, .instructions .buttonContainer {
 }
 
 .instructions ol {
-  margin: 0 100px;
+  margin: 0 33%;
   padding: 15px 0;
 }
 
@@ -78,7 +93,7 @@ h2, .instructions .buttonContainer {
 .gallery {
   display: flex;
   justify-content: space-evenly;
-  padding-bottom: 50px;
+  padding-bottom: 25px;
 }
 
 .imgContainer {
@@ -108,6 +123,10 @@ h3, .containLI, .form .buttonContainer {
   padding-right: 10px;
 }
 
+.break.two {
+  display: none;
+}
+
 .submit, .reset {
   padding: 10px;
   text-transform: uppercase;
@@ -116,7 +135,7 @@ h3, .containLI, .form .buttonContainer {
 /* Result */
 .result {
   text-align: center;
-  padding-top: 50px;
+  padding-top: 25;
 }
 
 .result img {
@@ -129,14 +148,14 @@ h3, .containLI, .form .buttonContainer {
 
 .reset {
   margin: 20px auto;
-
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 25px 0;
-  background-color: aqua;
+  background-color: red;
+  color: white;
 }
 
 /* Media Queries */

@@ -2,7 +2,7 @@ const Header = function() {
   return (
     // Header
     <header>
-      <div className="wrapper">
+      {/* <div className="wrapper"> */}
         <nav>
           <ul>
             <li><a href="#">Home</a></li>
@@ -11,7 +11,7 @@ const Header = function() {
         </nav>
 
         <h1>Misleading Headline</h1>
-      </div>
+      {/* </div> */}
     </header>
   )
 }

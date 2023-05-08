@@ -3,11 +3,13 @@ const Reset = function() {
     const form = document.querySelector("form");
     const result = document.querySelector(".result");
     const reset = document.querySelector(".reset");
-    const imgContainer = document.getElementsByClassName("imgContainer")
+    const line = document.querySelector(".break.two");
+    const imgContainer = document.getElementsByClassName("imgContainer");
 
     form.style.display = "none";
     result.style.display = "none";
     reset.style.display = "none";
+    line.style.display = "none";
     for (let i = 0; i < imgContainer.length; i++) {
       imgContainer[i].innerHTML = "";
     }

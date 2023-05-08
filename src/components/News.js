@@ -23,8 +23,9 @@ const News = function() {
   }
     
   const createForm = function(event) {
-    //Form popup
+    //Form & line separator popup
     document.querySelector('form').style.display = "block";
+    document.querySelector('.break.two').style.display = "block";
     
     callAPITwo(event.target);
   }

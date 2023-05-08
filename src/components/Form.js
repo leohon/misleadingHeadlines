@@ -6,7 +6,7 @@ const Form = function(props) {
     const reset = document.querySelector(".reset");
 
     result.style.display = "block";
-    reset.style.display = "block"
+    reset.style.display = "block";
     
     // Eliminates first initalization of 'section' which is null.
     if (result !== null) {
@@ -80,6 +80,8 @@ const Form = function(props) {
           <button className="submit">Submit</button>
         </div>
       </form>
+
+      <div className="break two"></div>
     
       {/* Result section where finished product is displayed */}
       <div className="result"></div>
