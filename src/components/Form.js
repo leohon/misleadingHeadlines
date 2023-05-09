@@ -1,6 +1,7 @@
 import Reset from "./Reset";
 
 const Form = function(props) {
+  // Display the user's creation in the result section
   const showResult = function(headline) {
     const result = document.querySelector(".result");
     const reset = document.querySelector(".reset");
@@ -8,24 +9,31 @@ const Form = function(props) {
     result.style.display = "block";
     reset.style.display = "block";
     
-    // Eliminates first initalization of 'section' which is null.
-    if (result !== null) {
-      // Create an img & p element (add classname) in the result section.
+    /**
+     * Eliminates first initalization of 'section' which is null.
+     * Create an img & h3 element (add classname) in the result section.
+     * Clear section then input image & text using src & innerHTML.
+     * Append to section.
+     */
+    // if (result !== null) {
       const imgElement = document.createElement("img");
       const h3Element = document.createElement("h3");
       h3Element.classList.add("headline");
       
-      // Clear section then input image & text using src & innerHTML
       result.innerHTML = "";
       imgElement.src = props.photo;
       h3Element.innerHTML = headline.join(" ");
 
-      // Append to section.
       result.appendChild(imgElement);
       result.appendChild(h3Element);
-    }
+    // }
   }
 
+  /**
+   * Madlib feature.
+   * Go through array of tags.
+   * Look for a noun, verb, and adjective then replace with respective user input from form.
+   */
   const madlib = function(e) {
     e.preventDefault();
 
@@ -35,8 +43,8 @@ const Form = function(props) {
     const adj = document.getElementById("adj");
     let nounNum = 0, verbNum = 0, adjNum = 0; //Counter for 1 noun, 1 verb, 1 adjective
 
-    // NN = noun, VB = verb, JJ = adjective
     for (let i = 0; i < props.tags.length; i++) {
+      // NN = noun, VB = verb, JJ = adjective
       if ((props.tags[i] === "NN" || props.tags[i] === "NNS" || props.tags[i] === "NNP" || props.tags[i] === "NNPS") && nounNum < 1) {
         nounNum++;
         props.text[i] = noun.value;
