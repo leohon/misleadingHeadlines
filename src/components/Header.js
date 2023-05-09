@@ -2,7 +2,6 @@ const Header = function() {
   return (
     // Header
     <header>
-      {/* <div className="wrapper"> */}
         <nav>
           <ul>
             <li><a href="#">Home</a></li>
@@ -10,8 +9,9 @@ const Header = function() {
           </ul>
         </nav>
 
+      <div className="wrapper">
         <h1>Misleading Headline</h1>
-      {/* </div> */}
+      </div>
     </header>
   )
 }

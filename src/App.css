@@ -41,13 +41,13 @@ a {
   margin: 25px 0;
 }
 
+button {
+  cursor: pointer;
+}
+
 /* Header */
 header {
   background: linear-gradient(blue, red);
-}
-
-nav {
-  /* background-color: blue; */
 }
 
 nav ul {
@@ -68,7 +68,6 @@ nav li a {
 h1 {
   text-align: center;
   padding: 100px 0;
-  /* background-color: red; */
   color: white;
   text-transform: uppercase;
 }
@@ -79,9 +78,14 @@ h2, .instructions .buttonContainer {
   padding: 15px 0;
 }
 
+h2 {
+  text-decoration: underline;
+}
+
 .instructions ol {
-  margin: 0 33%;
+  margin: 0 auto;
   padding: 15px 0;
+  width: 450px;
 }
 
 #generate {
@@ -101,19 +105,24 @@ h2, .instructions .buttonContainer {
 }
 
 /* Form */
-.form, .result, .reset {
+form, .result, .reset {
   display: none;
 }
 
-.form {
+form {
   text-align: center;
-  border: 2px solid;
+  border: 5px double;
+  border-radius: 35px;
   width: 40%;
   margin: 0 auto;
 }
 
 h3, .containLI, .form .buttonContainer {
   padding: 10px 0;
+}
+
+h3 {
+  text-transform: uppercase;
 }
 
 .containLI label {
@@ -159,3 +168,69 @@ footer {
 }
 
 /* Media Queries */
+@media (max-width: 1000px) {
+  form {
+    width: 50%;
+  }
+}
+
+@media (max-width: 750px) {
+  form {
+    width: 70%;
+  }
+
+  footer {
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    line-height: 2rem;
+    padding: 50px 0;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  nav li a, li, button, p {
+    font-size: 0.8rem;
+  }
+
+  .instructions ol {
+    width: 350px;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  .gallery {
+    display: block
+  }
+
+  .imgContainer {
+    width: 75%;
+    margin: 10px auto;
+  }
+
+  footer {
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .instructions ol {
+    width: 250px;
+  }
+
+  .containLI label {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+}
