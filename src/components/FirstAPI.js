@@ -33,7 +33,7 @@ const FirstAPI = function() {
 
   // Construct the endpoint
   const endpoint = function() {
-    const url = new URL("http://api.mediastack.com/v1/news");
+    const url = new URL("https://api.mediastack.com/v1/news");
     const apiKey = '0fa169ec9d099a5466a62a98dc6fdfa2';
     const canada = "ca";
     const offset = Math.floor(Math.random() * 100);
