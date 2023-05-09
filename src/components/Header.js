@@ -4,8 +4,8 @@ const Header = function() {
     <header>
         <nav>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Created</a></li>
+            <li><a href="#nav">Home</a></li>
+            <li><a href="#nav">Created</a></li>
           </ul>
         </nav>
 
