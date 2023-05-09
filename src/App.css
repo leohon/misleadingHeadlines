@@ -45,6 +45,16 @@ button {
   cursor: pointer;
 }
 
+/* Typography */
+h1 {
+  font-family: 'Libre Baskerville', serif;
+}
+
+h2, h3, li, p, button, label {
+  font-family: 'Gentium Plus', serif;
+  letter-spacing: 0.05rem;
+}
+
 /* Header */
 header {
   background: linear-gradient(blue, red);
@@ -78,7 +88,7 @@ h2, .instructions .buttonContainer {
   padding: 15px 0;
 }
 
-h2 {
+.instructions h2 {
   text-decoration: underline;
 }
 
@@ -121,7 +131,7 @@ h3, .containLI, .form .buttonContainer {
   padding: 10px 0;
 }
 
-h3 {
+.MLform h2 {
   text-transform: uppercase;
 }
 
@@ -175,6 +185,10 @@ footer {
 }
 
 @media (max-width: 750px) {
+  h1 {
+    line-height: 2rem;
+  }
+
   form {
     width: 70%;
   }
@@ -186,7 +200,6 @@ footer {
 
 @media (max-width: 500px) {
   h1 {
-    line-height: 2rem;
     padding: 50px 0;
   }
 

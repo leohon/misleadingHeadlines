@@ -12,17 +12,17 @@ const Form = function(props) {
     if (result !== null) {
       // Create an img & p element (add classname) in the result section.
       const imgElement = document.createElement("img");
-      const pElement = document.createElement("p");
-      pElement.classList.add("headline");
+      const h3Element = document.createElement("h3");
+      h3Element.classList.add("headline");
       
       // Clear section then input image & text using src & innerHTML
       result.innerHTML = "";
       imgElement.src = props.photo;
-      pElement.innerHTML = headline.join(" ");
+      h3Element.innerHTML = headline.join(" ");
 
       // Append to section.
       result.appendChild(imgElement);
-      result.appendChild(pElement);
+      result.appendChild(h3Element);
     }
   }
 
@@ -59,7 +59,7 @@ const Form = function(props) {
     <section className="MLform">
       {/* Form for madlib concept */}
       <form onSubmit={madlib} className="form">
-        <h3>Give me a . . .</h3>
+        <h2>Give me a . . .</h2>
 
         <div className="containLI">
           <label htmlFor="noun">Noun: </label>
