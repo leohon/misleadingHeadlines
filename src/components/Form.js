@@ -37,15 +37,15 @@ const Form = function(props) {
 
     // NN = noun, VB = verb, JJ = adjective
     for (let i = 0; i < props.tags.length; i++) {
-      if (props.tags[i] === "NN" && nounNum < 1) {
+      if ((props.tags[i] === "NN" || props.tags[i] === "NNS" || props.tags[i] === "NNP" || props.tags[i] === "NNPS") && nounNum < 1) {
         nounNum++;
         props.text[i] = noun.value;
       }
-      else if (props.tags[i] === "VB" && verbNum < 1) {
+      else if ((props.tags[i] === "VB" || props.tags[i] === "VBP" || props.tags[i] === "VBZ" || props.tags[i] === "VBG" || props.tags[i] === "VBD" || props.tags[i] === "VBN") && verbNum < 1) {
         verbNum++;
         props.text[i] = verb.value;
       }
-      else if (props.tags[i] === "JJ" && adjNum < 1) {
+      else if ((props.tags[i] === "JJ" || props.tags[i] === "JJR" || props.tags[i] === "JJS") && adjNum < 1) {
         adjNum++;
         props.text[i] = adj.value;
       }
