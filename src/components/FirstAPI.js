@@ -7,22 +7,22 @@ const FirstAPI = function() {
     for (let i = 0; i < imgContainer.length; i++) {
       imgContainer[i].innerHTML = "";
       const imgElement = document.createElement("img");
-      // const pElement = document.createElement("p");
+      const pElement = document.createElement("p");
       let index = Math.floor(Math.random() * 100);
 
       // If API returns null image, notify user and make option unavailable.
       // replace with placeholder and add sidenote?
       // Else, grab image & title, and put into gallery.
-      // if (images[index].urlToImage === null || images[index].urlToImage === undefined) {
-      //   pElement.innerHTML = "There is no image. Please choose another image or press the GENERATE button.";
-      //   imgContainer[i].appendChild(pElement);
-      //   continue;
-      // }
-      // else {
+      if (images[index].urlToImage === null || images[index].urlToImage === undefined) {
+        pElement.innerHTML = "There is no image. Please choose another image or press the GENERATE button.";
+        imgContainer[i].appendChild(pElement);
+        continue;
+      }
+      else {
         imgElement.src = images[index].urlToImage;
         imgElement.alt = images[index].title;
         imgContainer[i].appendChild(imgElement);
-      // }
+      }
     }
   }
 
