@@ -13,15 +13,15 @@ const FirstAPI = function() {
       // If API returns null image, notify user and make option unavailable.
       // replace with placeholder and add sidenote?
       // Else, grab image & title, and put into gallery.
-      if (images[index].urlToImage !== null) {
-        imgElement.src = images[index].urlToImage;
-        imgElement.alt = images[index].title;
-        imgContainer[i].appendChild(imgElement);
-      }
-      else {
+      if (images[index].urlToImage === null || images[index].urlToImage === undefined) {
         pElement.innerHTML = "There is no image. Please choose another image or press the GENERATE button.";
         imgContainer[i].appendChild(pElement);
         continue;
+      }
+      else {
+        imgElement.src = images[index].urlToImage;
+        imgElement.alt = images[index].title;
+        imgContainer[i].appendChild(imgElement);
       }
     }
   }
@@ -29,9 +29,8 @@ const FirstAPI = function() {
   // Call the API
   const callAPI = async function(url) {
     const obj = await fetch(url);
-    const res = await obj.json();
-    const images = res.articles;
-    display(images);
+    const images = await obj.json();
+    display(images.articles);
   }
 
   // Construct the endpoint
