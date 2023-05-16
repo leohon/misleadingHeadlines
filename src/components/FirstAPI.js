@@ -13,7 +13,7 @@ const FirstAPI = function() {
       // If API returns null image, notify user and make option unavailable.
       // replace with placeholder and add sidenote?
       // Else, grab image & title, and put into gallery.
-      if (images[index].urlToImage === null || images[index].urlToImage === undefined) {
+      if (images[index].urlToImage === null && images[index].urlToImage === undefined) {
         pElement.innerHTML = "There is no image. Please choose another image or press the GENERATE button.";
         imgContainer[i].appendChild(pElement);
         continue;
