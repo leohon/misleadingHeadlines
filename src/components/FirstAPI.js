@@ -2,23 +2,25 @@ const FirstAPI = function() {
   // Display the images
   const display = function(images) {
     const imgContainer = document.getElementsByClassName("imgContainer");
-      
+    
     // Loop through the different images, store the image and title as src and alt respectively.
     for (let i = 0; i < imgContainer.length; i++) {
       imgContainer[i].innerHTML = "";
       const imgElement = document.createElement("img");
       const pElement = document.createElement("p");
+      let index = Math.floor(Math.random() * 100);
 
       // If API returns null image, notify user and make option unavailable.
+      // replace with placeholder and add sidenote?
       // Else, grab image & title, and put into gallery.
-      if (images.data[i].image === null) {
+      if (images[index].urlToImage === null) {
         pElement.innerHTML = "There is no image. Please choose another image or press the GENERATE button.";
         imgContainer[i].appendChild(pElement);
         continue;
       }
       else {
-        imgElement.src = images.data[i].image;
-        imgElement.alt = images.data[i].title;
+        imgElement.src = images[index].urlToImage;
+        imgElement.alt = images[index].title;
         imgContainer[i].appendChild(imgElement);
       }
     }
@@ -28,21 +30,21 @@ const FirstAPI = function() {
   const callAPI = async function(url) {
     const obj = await fetch(url);
     const images = await obj.json();
-    display(images);
+    display(images.articles);
   }
 
   // Construct the endpoint
   const endpoint = function() {
-    const url = new URL("https://api.mediastack.com/v1/news");
-    const apiKey = '0fa169ec9d099a5466a62a98dc6fdfa2';
-    const canada = "ca";
-    const offset = Math.floor(Math.random() * 100);
+    // TODO change API - apparently http works local, not live
+    const url = new URL("https://newsapi.org/v2/everything?");
+    const apiKey = '68704b9a27404c29ad7269d1f286f5a7';
+    const keyword = "news";
+    const language = "en";
 
     url.search = new URLSearchParams({
-      access_key: apiKey,
-      countries: canada,
-      offset: offset,
-      limit: 3
+      apiKey: apiKey,
+      q: keyword,
+      language: language,
     })
 
     callAPI(url);
