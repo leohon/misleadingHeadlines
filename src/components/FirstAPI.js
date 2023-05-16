@@ -7,7 +7,7 @@ const FirstAPI = function() {
     for (let i = 0; i < imgContainer.length; i++) {
       imgContainer[i].innerHTML = "";
       const imgElement = document.createElement("img");
-      const pElement = document.createElement("p");
+      // const pElement = document.createElement("p");
       let index = Math.floor(Math.random() * 100);
 
       // If API returns null image, notify user and make option unavailable.
